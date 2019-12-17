@@ -31,12 +31,18 @@ for song in songs:
         else:
             urlstring += word
     url = 'https://www.discogs.com/search/?q='+urlstring+'&type=all'
-    r2 = requests.get(URL) 
+    r2 = requests.get(url) 
   
-    soup2 = BeautifulSoup(r.content, 'html5lib') 
-    s2  =soup.find("h4")
+    soup2 = BeautifulSoup(r2.content, 'html5lib') 
+    s2  =soup2.find("div",class_='card card_large float_fix shortcut_navigable')
     print(s2)
+    # for elem in s2:
+    #     cur=elem.find("h4")
+    #     print(cur)
+        
     # print('STARTING HERE: ',urlstring)
+
+
     
 
 
