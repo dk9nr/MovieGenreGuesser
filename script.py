@@ -35,7 +35,10 @@ for song in songs:
   
     soup2 = BeautifulSoup(r2.content, 'html5lib') 
     s2  =soup2.find("div",class_='card card_large float_fix shortcut_navigable')
-    print(s2)
+    # print(s2)
+    for elem in s2:
+        a  =soup2.find("a", class_="search_result_title")
+        print(a)
     # for elem in s2:
     #     cur=elem.find("h4")
     #     print(cur)
