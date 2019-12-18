@@ -2,7 +2,14 @@
 import requests 
 from bs4 import BeautifulSoup 
 
-movie = input('Which movie?\n')
+movie1 = input('Which movie?\n')
+movie = ''
+for letter in movie1:
+    if letter == " ":
+        movie += '-'
+    else:
+        movie += letter
+print(len(movie),movie)
 year = input('Which year?\n')
 
 URL = 'https://www.tunefind.com/movie/'+ movie+',-'+year
